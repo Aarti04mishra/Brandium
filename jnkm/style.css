@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.explore{
+    position: relative;
+    height: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 90px;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    overflow: hidden;
+    z-index: 2;
+}
+.explore::after{
+    content: " ";
+    position: absolute;
+    background-color: green;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    right: 0;
+    transform: translate(-50%,0);
+    z-index: -1;
+    transition: all ease 0.3s;
+    
+}
+.explore:hover:after{
+    scale: 50;
+}
+.explore i{
+    position: absolute;
+    right: 0;
+    transform: translate(-50%,0);
+    opacity: 0;
+    transition: all ease 0.3s;
+}
+.explore:hover i{
+    opacity: 1;
+}
